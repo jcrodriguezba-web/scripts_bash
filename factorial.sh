@@ -1,14 +1,17 @@
 #!/bin/bash
+
 #factorial de un número
 
 if [[ $# -ne 1 ]]
-    echo "Error: se requiere un único parámetri"
+then
+    echo "Error: se requiere un único parámetro"
     exit 1
 fi
 
 #comprovar que realmente tenemos un número
-if ! [["$1" =~ ^[0-9]+$ ]]; then
-    echo "error requiere número"
+if ! [[ "$1" =~ ^[0-9]+$ ]];
+then
+    echo "Error: se requiere un número"
     exit 1
 fi
 
