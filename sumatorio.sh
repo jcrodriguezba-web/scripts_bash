@@ -2,12 +2,14 @@
 
 
 if [[ $# -ne 1 ]]
+then
     echo "Error: se requiere un único parámetri"
     exit 1
 fi
 
 #comprovar que realmente tenemos un número
-if ! [["$1" =~ ^[0-9]+$ ]]; then
+if [["$1" =~ ^[0-9]+$ ]]; 
+then
     echo "error requiere número"
     exit 1
 fi
