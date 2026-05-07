@@ -20,11 +20,12 @@ n=$1
 suma=0
 
 #bucle for
-for (( i=1;i<=n;i++ ))
+for (( i=2;i<=n;i+=2 ))
 do
+    echo "i:$i valor de n $n"
     suma=$((suma+i))
 done
 
-echo "el sumatorio de $n vale $suma"
+echo "la suma de los números pares entre 1 y $n vale $suma"
 #calcular sumatorio de un numero
 exit 0
